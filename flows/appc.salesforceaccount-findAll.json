@@ -1,0 +1,52 @@
+{
+  "version": "1",
+  "returns": {
+    "status": "$.status|0",
+    "data": "$.response|0"
+  },
+  "start": "model.findAll",
+  "nodes": {
+    "model.findAll": {
+      "type": "ModelFindAll",
+      "config": {
+        "model": "appc.salesforce/Account"
+      },
+      "parameters": [],
+      "response": {
+        "context": {
+          "$|0": "models"
+        },
+        "routes": [
+          {
+            "next": "response.success"
+          }
+        ]
+      }
+    },
+    "response.success": {
+      "type": "parametermap",
+      "config": {},
+      "parameters": [
+        {
+          "name": "data",
+          "value": "$.models|0"
+        },
+        {
+          "name": "status",
+          "default": 200
+        }
+      ],
+      "response": {
+        "context": {
+          "$.data|0": "response",
+          "$.status|0": "status"
+        },
+        "routes": [
+          {
+            "next": null
+          }
+        ]
+      }
+    }
+  }
+}

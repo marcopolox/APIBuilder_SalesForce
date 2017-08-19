@@ -1,0 +1,44 @@
+{
+  "version": "1",
+  "returns": {
+    "status": "$.status|0"
+  },
+  "start": "model.deleteall",
+  "nodes": {
+    "model.deleteall": {
+      "type": "ModelDeleteAll",
+      "config": {
+        "model": "appc.salesforce/Account"
+      },
+      "parameters": [],
+      "response": {
+        "context": {},
+        "routes": [
+          {
+            "next": "response.success"
+          }
+        ]
+      }
+    },
+    "response.success": {
+      "type": "parametermap",
+      "config": {},
+      "parameters": [
+        {
+          "name": "status",
+          "default": 204
+        }
+      ],
+      "response": {
+        "context": {
+          "$.status|0": "status"
+        },
+        "routes": [
+          {
+            "next": null
+          }
+        ]
+      }
+    }
+  }
+}

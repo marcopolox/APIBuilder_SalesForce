@@ -1,0 +1,326 @@
+{
+  "version": "1",
+  "returns": {
+    "status": "$.status|0"
+  },
+  "start": "model.update",
+  "nodes": {
+    "model.update": {
+      "type": "ModelUpdate",
+      "config": {
+        "model": "appc.salesforce/Account"
+      },
+      "parameters": [
+        {
+          "name": "id",
+          "value": "$.params.id|0"
+        },
+        {
+          "name": "IsDeleted",
+          "value": "$.params[\"appc.salesforce/Account\"].IsDeleted|0"
+        },
+        {
+          "name": "MasterRecordId",
+          "value": "$.params[\"appc.salesforce/Account\"].MasterRecordId|0"
+        },
+        {
+          "name": "Name",
+          "value": "$.params[\"appc.salesforce/Account\"].Name|0"
+        },
+        {
+          "name": "Type",
+          "value": "$.params[\"appc.salesforce/Account\"].Type|0"
+        },
+        {
+          "name": "ParentId",
+          "value": "$.params[\"appc.salesforce/Account\"].ParentId|0"
+        },
+        {
+          "name": "BillingStreet",
+          "value": "$.params[\"appc.salesforce/Account\"].BillingStreet|0"
+        },
+        {
+          "name": "BillingCity",
+          "value": "$.params[\"appc.salesforce/Account\"].BillingCity|0"
+        },
+        {
+          "name": "BillingState",
+          "value": "$.params[\"appc.salesforce/Account\"].BillingState|0"
+        },
+        {
+          "name": "BillingPostalCode",
+          "value": "$.params[\"appc.salesforce/Account\"].BillingPostalCode|0"
+        },
+        {
+          "name": "BillingCountry",
+          "value": "$.params[\"appc.salesforce/Account\"].BillingCountry|0"
+        },
+        {
+          "name": "BillingLatitude",
+          "value": "$.params[\"appc.salesforce/Account\"].BillingLatitude|0"
+        },
+        {
+          "name": "BillingLongitude",
+          "value": "$.params[\"appc.salesforce/Account\"].BillingLongitude|0"
+        },
+        {
+          "name": "BillingAddress",
+          "value": "$.params[\"appc.salesforce/Account\"].BillingAddress|0"
+        },
+        {
+          "name": "ShippingStreet",
+          "value": "$.params[\"appc.salesforce/Account\"].ShippingStreet|0"
+        },
+        {
+          "name": "ShippingCity",
+          "value": "$.params[\"appc.salesforce/Account\"].ShippingCity|0"
+        },
+        {
+          "name": "ShippingState",
+          "value": "$.params[\"appc.salesforce/Account\"].ShippingState|0"
+        },
+        {
+          "name": "ShippingPostalCode",
+          "value": "$.params[\"appc.salesforce/Account\"].ShippingPostalCode|0"
+        },
+        {
+          "name": "ShippingCountry",
+          "value": "$.params[\"appc.salesforce/Account\"].ShippingCountry|0"
+        },
+        {
+          "name": "ShippingLatitude",
+          "value": "$.params[\"appc.salesforce/Account\"].ShippingLatitude|0"
+        },
+        {
+          "name": "ShippingLongitude",
+          "value": "$.params[\"appc.salesforce/Account\"].ShippingLongitude|0"
+        },
+        {
+          "name": "ShippingAddress",
+          "value": "$.params[\"appc.salesforce/Account\"].ShippingAddress|0"
+        },
+        {
+          "name": "Phone",
+          "value": "$.params[\"appc.salesforce/Account\"].Phone|0"
+        },
+        {
+          "name": "Fax",
+          "value": "$.params[\"appc.salesforce/Account\"].Fax|0"
+        },
+        {
+          "name": "AccountNumber",
+          "value": "$.params[\"appc.salesforce/Account\"].AccountNumber|0"
+        },
+        {
+          "name": "Website",
+          "value": "$.params[\"appc.salesforce/Account\"].Website|0"
+        },
+        {
+          "name": "PhotoUrl",
+          "value": "$.params[\"appc.salesforce/Account\"].PhotoUrl|0"
+        },
+        {
+          "name": "Sic",
+          "value": "$.params[\"appc.salesforce/Account\"].Sic|0"
+        },
+        {
+          "name": "Industry",
+          "value": "$.params[\"appc.salesforce/Account\"].Industry|0"
+        },
+        {
+          "name": "AnnualRevenue",
+          "value": "$.params[\"appc.salesforce/Account\"].AnnualRevenue|0"
+        },
+        {
+          "name": "NumberOfEmployees",
+          "value": "$.params[\"appc.salesforce/Account\"].NumberOfEmployees|0"
+        },
+        {
+          "name": "Ownership",
+          "value": "$.params[\"appc.salesforce/Account\"].Ownership|0"
+        },
+        {
+          "name": "TickerSymbol",
+          "value": "$.params[\"appc.salesforce/Account\"].TickerSymbol|0"
+        },
+        {
+          "name": "Description",
+          "value": "$.params[\"appc.salesforce/Account\"].Description|0"
+        },
+        {
+          "name": "Rating",
+          "value": "$.params[\"appc.salesforce/Account\"].Rating|0"
+        },
+        {
+          "name": "Site",
+          "value": "$.params[\"appc.salesforce/Account\"].Site|0"
+        },
+        {
+          "name": "OwnerId",
+          "value": "$.params[\"appc.salesforce/Account\"].OwnerId|0"
+        },
+        {
+          "name": "CreatedDate",
+          "value": "$.params[\"appc.salesforce/Account\"].CreatedDate|0"
+        },
+        {
+          "name": "CreatedById",
+          "value": "$.params[\"appc.salesforce/Account\"].CreatedById|0"
+        },
+        {
+          "name": "LastModifiedDate",
+          "value": "$.params[\"appc.salesforce/Account\"].LastModifiedDate|0"
+        },
+        {
+          "name": "LastModifiedById",
+          "value": "$.params[\"appc.salesforce/Account\"].LastModifiedById|0"
+        },
+        {
+          "name": "SystemModstamp",
+          "value": "$.params[\"appc.salesforce/Account\"].SystemModstamp|0"
+        },
+        {
+          "name": "LastActivityDate",
+          "value": "$.params[\"appc.salesforce/Account\"].LastActivityDate|0"
+        },
+        {
+          "name": "LastViewedDate",
+          "value": "$.params[\"appc.salesforce/Account\"].LastViewedDate|0"
+        },
+        {
+          "name": "LastReferencedDate",
+          "value": "$.params[\"appc.salesforce/Account\"].LastReferencedDate|0"
+        },
+        {
+          "name": "Jigsaw",
+          "value": "$.params[\"appc.salesforce/Account\"].Jigsaw|0"
+        },
+        {
+          "name": "JigsawCompanyId",
+          "value": "$.params[\"appc.salesforce/Account\"].JigsawCompanyId|0"
+        },
+        {
+          "name": "CleanStatus",
+          "value": "$.params[\"appc.salesforce/Account\"].CleanStatus|0"
+        },
+        {
+          "name": "AccountSource",
+          "value": "$.params[\"appc.salesforce/Account\"].AccountSource|0"
+        },
+        {
+          "name": "DunsNumber",
+          "value": "$.params[\"appc.salesforce/Account\"].DunsNumber|0"
+        },
+        {
+          "name": "Tradestyle",
+          "value": "$.params[\"appc.salesforce/Account\"].Tradestyle|0"
+        },
+        {
+          "name": "NaicsCode",
+          "value": "$.params[\"appc.salesforce/Account\"].NaicsCode|0"
+        },
+        {
+          "name": "NaicsDesc",
+          "value": "$.params[\"appc.salesforce/Account\"].NaicsDesc|0"
+        },
+        {
+          "name": "YearStarted",
+          "value": "$.params[\"appc.salesforce/Account\"].YearStarted|0"
+        },
+        {
+          "name": "SicDesc",
+          "value": "$.params[\"appc.salesforce/Account\"].SicDesc|0"
+        },
+        {
+          "name": "DandbCompanyId",
+          "value": "$.params[\"appc.salesforce/Account\"].DandbCompanyId|0"
+        },
+        {
+          "name": "CustomerPriority__c",
+          "value": "$.params[\"appc.salesforce/Account\"].CustomerPriority__c|0"
+        },
+        {
+          "name": "SLA__c",
+          "value": "$.params[\"appc.salesforce/Account\"].SLA__c|0"
+        },
+        {
+          "name": "Active__c",
+          "value": "$.params[\"appc.salesforce/Account\"].Active__c|0"
+        },
+        {
+          "name": "NumberofLocations__c",
+          "value": "$.params[\"appc.salesforce/Account\"].NumberofLocations__c|0"
+        },
+        {
+          "name": "UpsellOpportunity__c",
+          "value": "$.params[\"appc.salesforce/Account\"].UpsellOpportunity__c|0"
+        },
+        {
+          "name": "SLASerialNumber__c",
+          "value": "$.params[\"appc.salesforce/Account\"].SLASerialNumber__c|0"
+        },
+        {
+          "name": "SLAExpirationDate__c",
+          "value": "$.params[\"appc.salesforce/Account\"].SLAExpirationDate__c|0"
+        }
+      ],
+      "response": {
+        "context": {},
+        "routes": [
+          {
+            "conditions": [
+              {
+                "key": "$|0",
+                "exists": false
+              }
+            ],
+            "next": "response.error.notfound"
+          },
+          {
+            "next": "response.success"
+          }
+        ]
+      }
+    },
+    "response.success": {
+      "type": "parametermap",
+      "config": {},
+      "parameters": [
+        {
+          "name": "status",
+          "default": 204
+        }
+      ],
+      "response": {
+        "context": {
+          "$.status|0": "status"
+        },
+        "routes": [
+          {
+            "next": null
+          }
+        ]
+      }
+    },
+    "response.error.notfound": {
+      "type": "parametermap",
+      "config": {},
+      "parameters": [
+        {
+          "name": "status",
+          "default": 404
+        }
+      ],
+      "response": {
+        "context": {
+          "$.status|0": "status"
+        },
+        "routes": [
+          {
+            "next": null
+          }
+        ]
+      }
+    }
+  }
+}

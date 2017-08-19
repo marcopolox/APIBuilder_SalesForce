@@ -1,0 +1,2024 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "",
+    "version": "1.0.0",
+    "title": "appc.salesforce/Account"
+  },
+  "host": "localhost",
+  "basePath": "/endpoints",
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/account": {
+      "post": {
+        "responses": {
+          "201": {
+            "description": "The create succeeded.",
+            "headers": {
+              "Location": {
+                "description": "The URL to the newly created instance.",
+                "type": "string"
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request."
+          },
+          "401": {
+            "description": "This request requires user authentication, as configured by the server."
+          },
+          "404": {
+            "description": "No results were found."
+          },
+          "500": {
+            "description": "Something went wrong during the request; check out the logs on your server."
+          }
+        },
+        "operationId": "Create appc.salesforce/account",
+        "tags": [
+          "appc.salesforce/Account"
+        ],
+        "x-flow": "appc.salesforceaccount-create",
+        "description": "Create a appc.salesforce/account",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "appc.salesforce/Account",
+            "in": "body",
+            "description": "Create body",
+            "schema": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "Name",
+                "OwnerId"
+              ],
+              "properties": {
+                "IsDeleted": {
+                  "type": "boolean",
+                  "description": "Deleted"
+                },
+                "MasterRecordId": {
+                  "type": "string",
+                  "description": "Master Record ID"
+                },
+                "Name": {
+                  "type": "string",
+                  "description": "Account Name"
+                },
+                "Type": {
+                  "type": "string",
+                  "description": "Account Type"
+                },
+                "ParentId": {
+                  "type": "string",
+                  "description": "Parent Account ID"
+                },
+                "BillingStreet": {
+                  "type": "string",
+                  "description": "Billing Street"
+                },
+                "BillingCity": {
+                  "type": "string",
+                  "description": "Billing City"
+                },
+                "BillingState": {
+                  "type": "string",
+                  "description": "Billing State/Province"
+                },
+                "BillingPostalCode": {
+                  "type": "string",
+                  "description": "Billing Zip/Postal Code"
+                },
+                "BillingCountry": {
+                  "type": "string",
+                  "description": "Billing Country"
+                },
+                "BillingLatitude": {
+                  "type": "number",
+                  "description": "Billing Latitude"
+                },
+                "BillingLongitude": {
+                  "type": "number",
+                  "description": "Billing Longitude"
+                },
+                "BillingAddress": {
+                  "type": "string",
+                  "description": "Billing Address"
+                },
+                "ShippingStreet": {
+                  "type": "string",
+                  "description": "Shipping Street"
+                },
+                "ShippingCity": {
+                  "type": "string",
+                  "description": "Shipping City"
+                },
+                "ShippingState": {
+                  "type": "string",
+                  "description": "Shipping State/Province"
+                },
+                "ShippingPostalCode": {
+                  "type": "string",
+                  "description": "Shipping Zip/Postal Code"
+                },
+                "ShippingCountry": {
+                  "type": "string",
+                  "description": "Shipping Country"
+                },
+                "ShippingLatitude": {
+                  "type": "number",
+                  "description": "Shipping Latitude"
+                },
+                "ShippingLongitude": {
+                  "type": "number",
+                  "description": "Shipping Longitude"
+                },
+                "ShippingAddress": {
+                  "type": "string",
+                  "description": "Shipping Address"
+                },
+                "Phone": {
+                  "type": "string",
+                  "description": "Account Phone"
+                },
+                "Fax": {
+                  "type": "string",
+                  "description": "Account Fax"
+                },
+                "AccountNumber": {
+                  "type": "string",
+                  "description": "Account Number"
+                },
+                "Website": {
+                  "type": "string",
+                  "description": "Website"
+                },
+                "PhotoUrl": {
+                  "type": "string",
+                  "description": "Photo URL"
+                },
+                "Sic": {
+                  "type": "string",
+                  "description": "SIC Code"
+                },
+                "Industry": {
+                  "type": "string",
+                  "description": "Industry"
+                },
+                "AnnualRevenue": {
+                  "type": "number",
+                  "description": "Annual Revenue"
+                },
+                "NumberOfEmployees": {
+                  "type": "number",
+                  "description": "Employees"
+                },
+                "Ownership": {
+                  "type": "string",
+                  "description": "Ownership"
+                },
+                "TickerSymbol": {
+                  "type": "string",
+                  "description": "Ticker Symbol"
+                },
+                "Description": {
+                  "type": "string",
+                  "description": "Account Description"
+                },
+                "Rating": {
+                  "type": "string",
+                  "description": "Account Rating"
+                },
+                "Site": {
+                  "type": "string",
+                  "description": "Account Site"
+                },
+                "OwnerId": {
+                  "type": "string",
+                  "description": "Owner ID"
+                },
+                "CreatedDate": {
+                  "type": "string",
+                  "description": "Created Date"
+                },
+                "CreatedById": {
+                  "type": "string",
+                  "description": "Created By ID"
+                },
+                "LastModifiedDate": {
+                  "type": "string",
+                  "description": "Last Modified Date"
+                },
+                "LastModifiedById": {
+                  "type": "string",
+                  "description": "Last Modified By ID"
+                },
+                "SystemModstamp": {
+                  "type": "string",
+                  "description": "System Modstamp"
+                },
+                "LastActivityDate": {
+                  "type": "string",
+                  "description": "Last Activity"
+                },
+                "LastViewedDate": {
+                  "type": "string",
+                  "description": "Last Viewed Date"
+                },
+                "LastReferencedDate": {
+                  "type": "string",
+                  "description": "Last Referenced Date"
+                },
+                "Jigsaw": {
+                  "type": "string",
+                  "description": "Data.com Key"
+                },
+                "JigsawCompanyId": {
+                  "type": "string",
+                  "description": "Jigsaw Company ID"
+                },
+                "CleanStatus": {
+                  "type": "string",
+                  "description": "Clean Status"
+                },
+                "AccountSource": {
+                  "type": "string",
+                  "description": "Account Source"
+                },
+                "DunsNumber": {
+                  "type": "string",
+                  "description": "D-U-N-S Number"
+                },
+                "Tradestyle": {
+                  "type": "string",
+                  "description": "Tradestyle"
+                },
+                "NaicsCode": {
+                  "type": "string",
+                  "description": "NAICS Code"
+                },
+                "NaicsDesc": {
+                  "type": "string",
+                  "description": "NAICS Description"
+                },
+                "YearStarted": {
+                  "type": "string",
+                  "description": "Year Started"
+                },
+                "SicDesc": {
+                  "type": "string",
+                  "description": "SIC Description"
+                },
+                "DandbCompanyId": {
+                  "type": "string",
+                  "description": "D&B Company ID"
+                },
+                "CustomerPriority__c": {
+                  "type": "string",
+                  "description": "Customer Priority"
+                },
+                "SLA__c": {
+                  "type": "string",
+                  "description": "SLA"
+                },
+                "Active__c": {
+                  "type": "string",
+                  "description": "Active"
+                },
+                "NumberofLocations__c": {
+                  "type": "number",
+                  "description": "Number of Locations"
+                },
+                "UpsellOpportunity__c": {
+                  "type": "string",
+                  "description": "Upsell Opportunity"
+                },
+                "SLASerialNumber__c": {
+                  "type": "string",
+                  "description": "SLA Serial Number"
+                },
+                "SLAExpirationDate__c": {
+                  "type": "string",
+                  "description": "SLA Expiration Date"
+                }
+              }
+            }
+          }
+        ]
+      },
+      "delete": {
+        "responses": {
+          "204": {
+            "description": "The delete succeeded."
+          },
+          "401": {
+            "description": "This request requires user authentication, as configured by the server."
+          },
+          "404": {
+            "description": "No results were found."
+          },
+          "500": {
+            "description": "Something went wrong during the request; check out the logs on your server."
+          }
+        },
+        "operationId": "Delete All appc.salesforce/account",
+        "tags": [
+          "appc.salesforce/Account"
+        ],
+        "x-flow": "appc.salesforceaccount-deleteAll",
+        "description": "Deletes all appc.salesforce/accounts",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ]
+      },
+      "get": {
+        "responses": {
+          "200": {
+            "description": "The find all succeeded, and the results are available.",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/appc.salesforce_Account"
+              }
+            }
+          },
+          "401": {
+            "description": "This request requires user authentication, as configured by the server."
+          },
+          "404": {
+            "description": "No results were found."
+          },
+          "500": {
+            "description": "Something went wrong during the request; check out the logs on your server."
+          }
+        },
+        "operationId": "Find All appc.salesforce/account",
+        "tags": [
+          "appc.salesforce/Account"
+        ],
+        "x-flow": "appc.salesforceaccount-findAll",
+        "description": "Find all appc.salesforce/accounts",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ]
+      }
+    },
+    "/account/{id}": {
+      "put": {
+        "responses": {
+          "204": {
+            "description": "The update succeeded."
+          },
+          "400": {
+            "description": "Bad request."
+          },
+          "401": {
+            "description": "This request requires user authentication, as configured by the server."
+          },
+          "404": {
+            "description": "No results were found."
+          },
+          "500": {
+            "description": "Something went wrong during the request; check out the logs on your server."
+          }
+        },
+        "operationId": "Update appc.salesforce/account",
+        "tags": [
+          "appc.salesforce/Account"
+        ],
+        "x-flow": "appc.salesforceaccount-update",
+        "description": "Update a specific appc.salesforce/account",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "The appc.salesforce/account ID",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "appc.salesforce/Account",
+            "in": "body",
+            "description": "Update body",
+            "schema": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "IsDeleted": {
+                  "type": "boolean",
+                  "description": "Deleted"
+                },
+                "MasterRecordId": {
+                  "type": "string",
+                  "description": "Master Record ID"
+                },
+                "Name": {
+                  "type": "string",
+                  "description": "Account Name"
+                },
+                "Type": {
+                  "type": "string",
+                  "description": "Account Type"
+                },
+                "ParentId": {
+                  "type": "string",
+                  "description": "Parent Account ID"
+                },
+                "BillingStreet": {
+                  "type": "string",
+                  "description": "Billing Street"
+                },
+                "BillingCity": {
+                  "type": "string",
+                  "description": "Billing City"
+                },
+                "BillingState": {
+                  "type": "string",
+                  "description": "Billing State/Province"
+                },
+                "BillingPostalCode": {
+                  "type": "string",
+                  "description": "Billing Zip/Postal Code"
+                },
+                "BillingCountry": {
+                  "type": "string",
+                  "description": "Billing Country"
+                },
+                "BillingLatitude": {
+                  "type": "number",
+                  "description": "Billing Latitude"
+                },
+                "BillingLongitude": {
+                  "type": "number",
+                  "description": "Billing Longitude"
+                },
+                "BillingAddress": {
+                  "type": "string",
+                  "description": "Billing Address"
+                },
+                "ShippingStreet": {
+                  "type": "string",
+                  "description": "Shipping Street"
+                },
+                "ShippingCity": {
+                  "type": "string",
+                  "description": "Shipping City"
+                },
+                "ShippingState": {
+                  "type": "string",
+                  "description": "Shipping State/Province"
+                },
+                "ShippingPostalCode": {
+                  "type": "string",
+                  "description": "Shipping Zip/Postal Code"
+                },
+                "ShippingCountry": {
+                  "type": "string",
+                  "description": "Shipping Country"
+                },
+                "ShippingLatitude": {
+                  "type": "number",
+                  "description": "Shipping Latitude"
+                },
+                "ShippingLongitude": {
+                  "type": "number",
+                  "description": "Shipping Longitude"
+                },
+                "ShippingAddress": {
+                  "type": "string",
+                  "description": "Shipping Address"
+                },
+                "Phone": {
+                  "type": "string",
+                  "description": "Account Phone"
+                },
+                "Fax": {
+                  "type": "string",
+                  "description": "Account Fax"
+                },
+                "AccountNumber": {
+                  "type": "string",
+                  "description": "Account Number"
+                },
+                "Website": {
+                  "type": "string",
+                  "description": "Website"
+                },
+                "PhotoUrl": {
+                  "type": "string",
+                  "description": "Photo URL"
+                },
+                "Sic": {
+                  "type": "string",
+                  "description": "SIC Code"
+                },
+                "Industry": {
+                  "type": "string",
+                  "description": "Industry"
+                },
+                "AnnualRevenue": {
+                  "type": "number",
+                  "description": "Annual Revenue"
+                },
+                "NumberOfEmployees": {
+                  "type": "number",
+                  "description": "Employees"
+                },
+                "Ownership": {
+                  "type": "string",
+                  "description": "Ownership"
+                },
+                "TickerSymbol": {
+                  "type": "string",
+                  "description": "Ticker Symbol"
+                },
+                "Description": {
+                  "type": "string",
+                  "description": "Account Description"
+                },
+                "Rating": {
+                  "type": "string",
+                  "description": "Account Rating"
+                },
+                "Site": {
+                  "type": "string",
+                  "description": "Account Site"
+                },
+                "OwnerId": {
+                  "type": "string",
+                  "description": "Owner ID"
+                },
+                "CreatedDate": {
+                  "type": "string",
+                  "description": "Created Date"
+                },
+                "CreatedById": {
+                  "type": "string",
+                  "description": "Created By ID"
+                },
+                "LastModifiedDate": {
+                  "type": "string",
+                  "description": "Last Modified Date"
+                },
+                "LastModifiedById": {
+                  "type": "string",
+                  "description": "Last Modified By ID"
+                },
+                "SystemModstamp": {
+                  "type": "string",
+                  "description": "System Modstamp"
+                },
+                "LastActivityDate": {
+                  "type": "string",
+                  "description": "Last Activity"
+                },
+                "LastViewedDate": {
+                  "type": "string",
+                  "description": "Last Viewed Date"
+                },
+                "LastReferencedDate": {
+                  "type": "string",
+                  "description": "Last Referenced Date"
+                },
+                "Jigsaw": {
+                  "type": "string",
+                  "description": "Data.com Key"
+                },
+                "JigsawCompanyId": {
+                  "type": "string",
+                  "description": "Jigsaw Company ID"
+                },
+                "CleanStatus": {
+                  "type": "string",
+                  "description": "Clean Status"
+                },
+                "AccountSource": {
+                  "type": "string",
+                  "description": "Account Source"
+                },
+                "DunsNumber": {
+                  "type": "string",
+                  "description": "D-U-N-S Number"
+                },
+                "Tradestyle": {
+                  "type": "string",
+                  "description": "Tradestyle"
+                },
+                "NaicsCode": {
+                  "type": "string",
+                  "description": "NAICS Code"
+                },
+                "NaicsDesc": {
+                  "type": "string",
+                  "description": "NAICS Description"
+                },
+                "YearStarted": {
+                  "type": "string",
+                  "description": "Year Started"
+                },
+                "SicDesc": {
+                  "type": "string",
+                  "description": "SIC Description"
+                },
+                "DandbCompanyId": {
+                  "type": "string",
+                  "description": "D&B Company ID"
+                },
+                "CustomerPriority__c": {
+                  "type": "string",
+                  "description": "Customer Priority"
+                },
+                "SLA__c": {
+                  "type": "string",
+                  "description": "SLA"
+                },
+                "Active__c": {
+                  "type": "string",
+                  "description": "Active"
+                },
+                "NumberofLocations__c": {
+                  "type": "number",
+                  "description": "Number of Locations"
+                },
+                "UpsellOpportunity__c": {
+                  "type": "string",
+                  "description": "Upsell Opportunity"
+                },
+                "SLASerialNumber__c": {
+                  "type": "string",
+                  "description": "SLA Serial Number"
+                },
+                "SLAExpirationDate__c": {
+                  "type": "string",
+                  "description": "SLA Expiration Date"
+                }
+              }
+            }
+          }
+        ]
+      },
+      "delete": {
+        "responses": {
+          "204": {
+            "description": "The delete succeeded."
+          },
+          "400": {
+            "description": "Bad request."
+          },
+          "401": {
+            "description": "This request requires user authentication, as configured by the server."
+          },
+          "404": {
+            "description": "No results were found."
+          },
+          "500": {
+            "description": "Something went wrong during the request; check out the logs on your server."
+          }
+        },
+        "operationId": "Delete One appc.salesforce/account",
+        "tags": [
+          "appc.salesforce/Account"
+        ],
+        "x-flow": "appc.salesforceaccount-delete",
+        "description": "Delete a specific appc.salesforce/account",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "The appc.salesforce/account ID",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      },
+      "get": {
+        "responses": {
+          "200": {
+            "description": "appc.salesforce/Account Response",
+            "schema": {
+              "$ref": "#/definitions/appc.salesforce_Account"
+            }
+          },
+          "400": {
+            "description": "Bad request."
+          },
+          "401": {
+            "description": "This request requires user authentication, as configured by the server."
+          },
+          "404": {
+            "description": "No results were found."
+          },
+          "500": {
+            "description": "Something went wrong during the request; check out the logs on your server."
+          }
+        },
+        "operationId": "Find By ID appc.salesforce/account",
+        "tags": [
+          "appc.salesforce/Account"
+        ],
+        "x-flow": "appc.salesforceaccount-findByID",
+        "description": "Find one appc.salesforce/account by ID",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "The find succeeded, and the results are available.",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "/account/distinct/{field}": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "Distinct fields response.",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "uniqueItems": true
+            }
+          },
+          "400": {
+            "description": "Bad request."
+          },
+          "401": {
+            "description": "This request requires user authentication, as configured by the server."
+          },
+          "404": {
+            "description": "No results were found."
+          },
+          "500": {
+            "description": "Something went wrong during the request; check out the logs on your server."
+          }
+        },
+        "operationId": "Distinct appc.salesforce/account",
+        "tags": [
+          "appc.salesforce/Account"
+        ],
+        "x-flow": "appc.salesforceaccount-distinct",
+        "description": "Find distinct appc.salesforce/accounts",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "limit",
+            "description": "The number of records to fetch. The value must be greater than 0, and no greater than 1000.",
+            "required": false,
+            "type": "number",
+            "default": 10
+          },
+          {
+            "in": "query",
+            "name": "skip",
+            "description": "The number of records to skip. The value must not be less than 0.",
+            "required": false,
+            "type": "number",
+            "default": 0
+          },
+          {
+            "in": "query",
+            "name": "where",
+            "description": "Constrains values for fields. The value should be encoded JSON.",
+            "required": false,
+            "type": "string",
+            "format": "json"
+          },
+          {
+            "in": "query",
+            "name": "order",
+            "description": "A dictionary of one or more fields specifying sorting of results. In general, you can sort based on any predefined field that you can query using the where operator, as well as on custom fields. The value should be encoded JSON.",
+            "required": false,
+            "type": "string",
+            "format": "json"
+          },
+          {
+            "in": "query",
+            "name": "sel",
+            "description": "Selects which fields to return from the query. Others are excluded. The value should be encoded JSON.",
+            "required": false,
+            "type": "string",
+            "format": "json"
+          },
+          {
+            "in": "query",
+            "name": "unsel",
+            "description": "Selects which fields to not return from the query. Others are included. The value should be encoded JSON.",
+            "required": false,
+            "type": "string",
+            "format": "json"
+          },
+          {
+            "in": "query",
+            "name": "page",
+            "description": "Request page number starting from 1.",
+            "required": false,
+            "type": "number",
+            "default": 1
+          },
+          {
+            "in": "query",
+            "name": "per_page",
+            "description": "Number of results per page.",
+            "required": false,
+            "type": "number",
+            "default": 10
+          },
+          {
+            "in": "path",
+            "name": "field",
+            "description": "The field name that must be distinct.",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "/account/findAndModify": {
+      "put": {
+        "responses": {
+          "204": {
+            "description": "The find and modify succeeded."
+          },
+          "400": {
+            "description": "Bad request."
+          },
+          "401": {
+            "description": "This request requires user authentication, as configured by the server."
+          },
+          "404": {
+            "description": "No results were found."
+          },
+          "500": {
+            "description": "Something went wrong during the request; check out the logs on your server."
+          }
+        },
+        "operationId": "Find and Modify appc.salesforce/account",
+        "tags": [
+          "appc.salesforce/Account"
+        ],
+        "x-flow": "appc.salesforceaccount-findAndModify",
+        "description": "Find and modify appc.salesforce/accounts",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "limit",
+            "description": "The number of records to fetch. The value must be greater than 0, and no greater than 1000.",
+            "required": false,
+            "type": "number",
+            "default": 10
+          },
+          {
+            "in": "query",
+            "name": "skip",
+            "description": "The number of records to skip. The value must not be less than 0.",
+            "required": false,
+            "type": "number",
+            "default": 0
+          },
+          {
+            "in": "query",
+            "name": "where",
+            "description": "Constrains values for fields. The value should be encoded JSON.",
+            "required": false,
+            "type": "string",
+            "format": "json"
+          },
+          {
+            "in": "query",
+            "name": "order",
+            "description": "A dictionary of one or more fields specifying sorting of results. In general, you can sort based on any predefined field that you can query using the where operator, as well as on custom fields. The value should be encoded JSON.",
+            "required": false,
+            "type": "string",
+            "format": "json"
+          },
+          {
+            "in": "query",
+            "name": "sel",
+            "description": "Selects which fields to return from the query. Others are excluded. The value should be encoded JSON.",
+            "required": false,
+            "type": "string",
+            "format": "json"
+          },
+          {
+            "in": "query",
+            "name": "unsel",
+            "description": "Selects which fields to not return from the query. Others are included. The value should be encoded JSON.",
+            "required": false,
+            "type": "string",
+            "format": "json"
+          },
+          {
+            "in": "query",
+            "name": "page",
+            "description": "Request page number starting from 1.",
+            "required": false,
+            "type": "number",
+            "default": 1
+          },
+          {
+            "in": "query",
+            "name": "per_page",
+            "description": "Number of results per page.",
+            "required": false,
+            "type": "number",
+            "default": 10
+          },
+          {
+            "name": "appc.salesforce/Account",
+            "in": "body",
+            "description": "Find and Modify body",
+            "schema": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "Name",
+                "OwnerId"
+              ],
+              "properties": {
+                "IsDeleted": {
+                  "type": "boolean",
+                  "description": "Deleted"
+                },
+                "MasterRecordId": {
+                  "type": "string",
+                  "description": "Master Record ID"
+                },
+                "Name": {
+                  "type": "string",
+                  "description": "Account Name"
+                },
+                "Type": {
+                  "type": "string",
+                  "description": "Account Type"
+                },
+                "ParentId": {
+                  "type": "string",
+                  "description": "Parent Account ID"
+                },
+                "BillingStreet": {
+                  "type": "string",
+                  "description": "Billing Street"
+                },
+                "BillingCity": {
+                  "type": "string",
+                  "description": "Billing City"
+                },
+                "BillingState": {
+                  "type": "string",
+                  "description": "Billing State/Province"
+                },
+                "BillingPostalCode": {
+                  "type": "string",
+                  "description": "Billing Zip/Postal Code"
+                },
+                "BillingCountry": {
+                  "type": "string",
+                  "description": "Billing Country"
+                },
+                "BillingLatitude": {
+                  "type": "number",
+                  "description": "Billing Latitude"
+                },
+                "BillingLongitude": {
+                  "type": "number",
+                  "description": "Billing Longitude"
+                },
+                "BillingAddress": {
+                  "type": "string",
+                  "description": "Billing Address"
+                },
+                "ShippingStreet": {
+                  "type": "string",
+                  "description": "Shipping Street"
+                },
+                "ShippingCity": {
+                  "type": "string",
+                  "description": "Shipping City"
+                },
+                "ShippingState": {
+                  "type": "string",
+                  "description": "Shipping State/Province"
+                },
+                "ShippingPostalCode": {
+                  "type": "string",
+                  "description": "Shipping Zip/Postal Code"
+                },
+                "ShippingCountry": {
+                  "type": "string",
+                  "description": "Shipping Country"
+                },
+                "ShippingLatitude": {
+                  "type": "number",
+                  "description": "Shipping Latitude"
+                },
+                "ShippingLongitude": {
+                  "type": "number",
+                  "description": "Shipping Longitude"
+                },
+                "ShippingAddress": {
+                  "type": "string",
+                  "description": "Shipping Address"
+                },
+                "Phone": {
+                  "type": "string",
+                  "description": "Account Phone"
+                },
+                "Fax": {
+                  "type": "string",
+                  "description": "Account Fax"
+                },
+                "AccountNumber": {
+                  "type": "string",
+                  "description": "Account Number"
+                },
+                "Website": {
+                  "type": "string",
+                  "description": "Website"
+                },
+                "PhotoUrl": {
+                  "type": "string",
+                  "description": "Photo URL"
+                },
+                "Sic": {
+                  "type": "string",
+                  "description": "SIC Code"
+                },
+                "Industry": {
+                  "type": "string",
+                  "description": "Industry"
+                },
+                "AnnualRevenue": {
+                  "type": "number",
+                  "description": "Annual Revenue"
+                },
+                "NumberOfEmployees": {
+                  "type": "number",
+                  "description": "Employees"
+                },
+                "Ownership": {
+                  "type": "string",
+                  "description": "Ownership"
+                },
+                "TickerSymbol": {
+                  "type": "string",
+                  "description": "Ticker Symbol"
+                },
+                "Description": {
+                  "type": "string",
+                  "description": "Account Description"
+                },
+                "Rating": {
+                  "type": "string",
+                  "description": "Account Rating"
+                },
+                "Site": {
+                  "type": "string",
+                  "description": "Account Site"
+                },
+                "OwnerId": {
+                  "type": "string",
+                  "description": "Owner ID"
+                },
+                "CreatedDate": {
+                  "type": "string",
+                  "description": "Created Date"
+                },
+                "CreatedById": {
+                  "type": "string",
+                  "description": "Created By ID"
+                },
+                "LastModifiedDate": {
+                  "type": "string",
+                  "description": "Last Modified Date"
+                },
+                "LastModifiedById": {
+                  "type": "string",
+                  "description": "Last Modified By ID"
+                },
+                "SystemModstamp": {
+                  "type": "string",
+                  "description": "System Modstamp"
+                },
+                "LastActivityDate": {
+                  "type": "string",
+                  "description": "Last Activity"
+                },
+                "LastViewedDate": {
+                  "type": "string",
+                  "description": "Last Viewed Date"
+                },
+                "LastReferencedDate": {
+                  "type": "string",
+                  "description": "Last Referenced Date"
+                },
+                "Jigsaw": {
+                  "type": "string",
+                  "description": "Data.com Key"
+                },
+                "JigsawCompanyId": {
+                  "type": "string",
+                  "description": "Jigsaw Company ID"
+                },
+                "CleanStatus": {
+                  "type": "string",
+                  "description": "Clean Status"
+                },
+                "AccountSource": {
+                  "type": "string",
+                  "description": "Account Source"
+                },
+                "DunsNumber": {
+                  "type": "string",
+                  "description": "D-U-N-S Number"
+                },
+                "Tradestyle": {
+                  "type": "string",
+                  "description": "Tradestyle"
+                },
+                "NaicsCode": {
+                  "type": "string",
+                  "description": "NAICS Code"
+                },
+                "NaicsDesc": {
+                  "type": "string",
+                  "description": "NAICS Description"
+                },
+                "YearStarted": {
+                  "type": "string",
+                  "description": "Year Started"
+                },
+                "SicDesc": {
+                  "type": "string",
+                  "description": "SIC Description"
+                },
+                "DandbCompanyId": {
+                  "type": "string",
+                  "description": "D&B Company ID"
+                },
+                "CustomerPriority__c": {
+                  "type": "string",
+                  "description": "Customer Priority"
+                },
+                "SLA__c": {
+                  "type": "string",
+                  "description": "SLA"
+                },
+                "Active__c": {
+                  "type": "string",
+                  "description": "Active"
+                },
+                "NumberofLocations__c": {
+                  "type": "number",
+                  "description": "Number of Locations"
+                },
+                "UpsellOpportunity__c": {
+                  "type": "string",
+                  "description": "Upsell Opportunity"
+                },
+                "SLASerialNumber__c": {
+                  "type": "string",
+                  "description": "SLA Serial Number"
+                },
+                "SLAExpirationDate__c": {
+                  "type": "string",
+                  "description": "SLA Expiration Date"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "/account/count": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "The count succeeded, and the results are available.",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          "400": {
+            "description": "Bad request."
+          },
+          "401": {
+            "description": "This request requires user authentication, as configured by the server."
+          },
+          "404": {
+            "description": "No results were found."
+          },
+          "500": {
+            "description": "Something went wrong during the request; check out the logs on your server."
+          }
+        },
+        "operationId": "Count appc.salesforce/account",
+        "tags": [
+          "appc.salesforce/Account"
+        ],
+        "x-flow": "appc.salesforceaccount-count",
+        "description": "Count appc.salesforce/accounts",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "limit",
+            "description": "The number of records to fetch. The value must be greater than 0, and no greater than 1000.",
+            "required": false,
+            "type": "number",
+            "default": 10
+          },
+          {
+            "in": "query",
+            "name": "skip",
+            "description": "The number of records to skip. The value must not be less than 0.",
+            "required": false,
+            "type": "number",
+            "default": 0
+          },
+          {
+            "in": "query",
+            "name": "where",
+            "description": "Constrains values for fields. The value should be encoded JSON.",
+            "required": false,
+            "type": "string",
+            "format": "json"
+          },
+          {
+            "in": "query",
+            "name": "order",
+            "description": "A dictionary of one or more fields specifying sorting of results. In general, you can sort based on any predefined field that you can query using the where operator, as well as on custom fields. The value should be encoded JSON.",
+            "required": false,
+            "type": "string",
+            "format": "json"
+          },
+          {
+            "in": "query",
+            "name": "sel",
+            "description": "Selects which fields to return from the query. Others are excluded. The value should be encoded JSON.",
+            "required": false,
+            "type": "string",
+            "format": "json"
+          },
+          {
+            "in": "query",
+            "name": "unsel",
+            "description": "Selects which fields to not return from the query. Others are included. The value should be encoded JSON.",
+            "required": false,
+            "type": "string",
+            "format": "json"
+          },
+          {
+            "in": "query",
+            "name": "page",
+            "description": "Request page number starting from 1.",
+            "required": false,
+            "type": "number",
+            "default": 1
+          },
+          {
+            "in": "query",
+            "name": "per_page",
+            "description": "Number of results per page.",
+            "required": false,
+            "type": "number",
+            "default": 10
+          }
+        ]
+      }
+    },
+    "/account/upsert": {
+      "post": {
+        "responses": {
+          "201": {
+            "description": "The upsert succeeded, and resulted in an insert.",
+            "headers": {
+              "Location": {
+                "description": "The URL to the newly created instance.",
+                "type": "string"
+              }
+            }
+          },
+          "204": {
+            "description": "The upsert succeeded, and resulted in an update."
+          },
+          "400": {
+            "description": "Bad request."
+          },
+          "401": {
+            "description": "This request requires user authentication, as configured by the server."
+          },
+          "404": {
+            "description": "No results were found."
+          },
+          "500": {
+            "description": "Something went wrong during the request; check out the logs on your server."
+          }
+        },
+        "operationId": "Upsert appc.salesforce/account",
+        "tags": [
+          "appc.salesforce/Account"
+        ],
+        "x-flow": "appc.salesforceaccount-upsert",
+        "description": "Create or update a appc.salesforce/account",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "appc.salesforce/Account",
+            "in": "body",
+            "description": "Upsert body",
+            "schema": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "Name",
+                "OwnerId"
+              ],
+              "properties": {
+                "IsDeleted": {
+                  "type": "boolean",
+                  "description": "Deleted"
+                },
+                "MasterRecordId": {
+                  "type": "string",
+                  "description": "Master Record ID"
+                },
+                "Name": {
+                  "type": "string",
+                  "description": "Account Name"
+                },
+                "Type": {
+                  "type": "string",
+                  "description": "Account Type"
+                },
+                "ParentId": {
+                  "type": "string",
+                  "description": "Parent Account ID"
+                },
+                "BillingStreet": {
+                  "type": "string",
+                  "description": "Billing Street"
+                },
+                "BillingCity": {
+                  "type": "string",
+                  "description": "Billing City"
+                },
+                "BillingState": {
+                  "type": "string",
+                  "description": "Billing State/Province"
+                },
+                "BillingPostalCode": {
+                  "type": "string",
+                  "description": "Billing Zip/Postal Code"
+                },
+                "BillingCountry": {
+                  "type": "string",
+                  "description": "Billing Country"
+                },
+                "BillingLatitude": {
+                  "type": "number",
+                  "description": "Billing Latitude"
+                },
+                "BillingLongitude": {
+                  "type": "number",
+                  "description": "Billing Longitude"
+                },
+                "BillingAddress": {
+                  "type": "string",
+                  "description": "Billing Address"
+                },
+                "ShippingStreet": {
+                  "type": "string",
+                  "description": "Shipping Street"
+                },
+                "ShippingCity": {
+                  "type": "string",
+                  "description": "Shipping City"
+                },
+                "ShippingState": {
+                  "type": "string",
+                  "description": "Shipping State/Province"
+                },
+                "ShippingPostalCode": {
+                  "type": "string",
+                  "description": "Shipping Zip/Postal Code"
+                },
+                "ShippingCountry": {
+                  "type": "string",
+                  "description": "Shipping Country"
+                },
+                "ShippingLatitude": {
+                  "type": "number",
+                  "description": "Shipping Latitude"
+                },
+                "ShippingLongitude": {
+                  "type": "number",
+                  "description": "Shipping Longitude"
+                },
+                "ShippingAddress": {
+                  "type": "string",
+                  "description": "Shipping Address"
+                },
+                "Phone": {
+                  "type": "string",
+                  "description": "Account Phone"
+                },
+                "Fax": {
+                  "type": "string",
+                  "description": "Account Fax"
+                },
+                "AccountNumber": {
+                  "type": "string",
+                  "description": "Account Number"
+                },
+                "Website": {
+                  "type": "string",
+                  "description": "Website"
+                },
+                "PhotoUrl": {
+                  "type": "string",
+                  "description": "Photo URL"
+                },
+                "Sic": {
+                  "type": "string",
+                  "description": "SIC Code"
+                },
+                "Industry": {
+                  "type": "string",
+                  "description": "Industry"
+                },
+                "AnnualRevenue": {
+                  "type": "number",
+                  "description": "Annual Revenue"
+                },
+                "NumberOfEmployees": {
+                  "type": "number",
+                  "description": "Employees"
+                },
+                "Ownership": {
+                  "type": "string",
+                  "description": "Ownership"
+                },
+                "TickerSymbol": {
+                  "type": "string",
+                  "description": "Ticker Symbol"
+                },
+                "Description": {
+                  "type": "string",
+                  "description": "Account Description"
+                },
+                "Rating": {
+                  "type": "string",
+                  "description": "Account Rating"
+                },
+                "Site": {
+                  "type": "string",
+                  "description": "Account Site"
+                },
+                "OwnerId": {
+                  "type": "string",
+                  "description": "Owner ID"
+                },
+                "CreatedDate": {
+                  "type": "string",
+                  "description": "Created Date"
+                },
+                "CreatedById": {
+                  "type": "string",
+                  "description": "Created By ID"
+                },
+                "LastModifiedDate": {
+                  "type": "string",
+                  "description": "Last Modified Date"
+                },
+                "LastModifiedById": {
+                  "type": "string",
+                  "description": "Last Modified By ID"
+                },
+                "SystemModstamp": {
+                  "type": "string",
+                  "description": "System Modstamp"
+                },
+                "LastActivityDate": {
+                  "type": "string",
+                  "description": "Last Activity"
+                },
+                "LastViewedDate": {
+                  "type": "string",
+                  "description": "Last Viewed Date"
+                },
+                "LastReferencedDate": {
+                  "type": "string",
+                  "description": "Last Referenced Date"
+                },
+                "Jigsaw": {
+                  "type": "string",
+                  "description": "Data.com Key"
+                },
+                "JigsawCompanyId": {
+                  "type": "string",
+                  "description": "Jigsaw Company ID"
+                },
+                "CleanStatus": {
+                  "type": "string",
+                  "description": "Clean Status"
+                },
+                "AccountSource": {
+                  "type": "string",
+                  "description": "Account Source"
+                },
+                "DunsNumber": {
+                  "type": "string",
+                  "description": "D-U-N-S Number"
+                },
+                "Tradestyle": {
+                  "type": "string",
+                  "description": "Tradestyle"
+                },
+                "NaicsCode": {
+                  "type": "string",
+                  "description": "NAICS Code"
+                },
+                "NaicsDesc": {
+                  "type": "string",
+                  "description": "NAICS Description"
+                },
+                "YearStarted": {
+                  "type": "string",
+                  "description": "Year Started"
+                },
+                "SicDesc": {
+                  "type": "string",
+                  "description": "SIC Description"
+                },
+                "DandbCompanyId": {
+                  "type": "string",
+                  "description": "D&B Company ID"
+                },
+                "CustomerPriority__c": {
+                  "type": "string",
+                  "description": "Customer Priority"
+                },
+                "SLA__c": {
+                  "type": "string",
+                  "description": "SLA"
+                },
+                "Active__c": {
+                  "type": "string",
+                  "description": "Active"
+                },
+                "NumberofLocations__c": {
+                  "type": "number",
+                  "description": "Number of Locations"
+                },
+                "UpsellOpportunity__c": {
+                  "type": "string",
+                  "description": "Upsell Opportunity"
+                },
+                "SLASerialNumber__c": {
+                  "type": "string",
+                  "description": "SLA Serial Number"
+                },
+                "SLAExpirationDate__c": {
+                  "type": "string",
+                  "description": "SLA Expiration Date"
+                },
+                "id": {
+                  "type": "string",
+                  "description": "The appc.salesforce/account ID"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "/account/query": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "The query succeeded, and the results are available.",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/appc.salesforce_Account"
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request."
+          },
+          "401": {
+            "description": "This request requires user authentication, as configured by the server."
+          },
+          "404": {
+            "description": "No results were found."
+          },
+          "500": {
+            "description": "Something went wrong during the request; check out the logs on your server."
+          }
+        },
+        "operationId": "Query appc.salesforce/account",
+        "tags": [
+          "appc.salesforce/Account"
+        ],
+        "x-flow": "appc.salesforceaccount-query",
+        "description": "Query appc.salesforce/accounts",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "limit",
+            "description": "The number of records to fetch. The value must be greater than 0, and no greater than 1000.",
+            "required": false,
+            "type": "number",
+            "default": 10
+          },
+          {
+            "in": "query",
+            "name": "skip",
+            "description": "The number of records to skip. The value must not be less than 0.",
+            "required": false,
+            "type": "number",
+            "default": 0
+          },
+          {
+            "in": "query",
+            "name": "where",
+            "description": "Constrains values for fields. The value should be encoded JSON.",
+            "required": false,
+            "type": "string",
+            "format": "json"
+          },
+          {
+            "in": "query",
+            "name": "order",
+            "description": "A dictionary of one or more fields specifying sorting of results. In general, you can sort based on any predefined field that you can query using the where operator, as well as on custom fields. The value should be encoded JSON.",
+            "required": false,
+            "type": "string",
+            "format": "json"
+          },
+          {
+            "in": "query",
+            "name": "sel",
+            "description": "Selects which fields to return from the query. Others are excluded. The value should be encoded JSON.",
+            "required": false,
+            "type": "string",
+            "format": "json"
+          },
+          {
+            "in": "query",
+            "name": "unsel",
+            "description": "Selects which fields to not return from the query. Others are included. The value should be encoded JSON.",
+            "required": false,
+            "type": "string",
+            "format": "json"
+          },
+          {
+            "in": "query",
+            "name": "page",
+            "description": "Request page number starting from 1.",
+            "required": false,
+            "type": "number",
+            "default": 1
+          },
+          {
+            "in": "query",
+            "name": "per_page",
+            "description": "Number of results per page.",
+            "required": false,
+            "type": "number",
+            "default": 10
+          }
+        ]
+      }
+    }
+  },
+  "securityDefinitions": {},
+  "definitions": {
+    "appc.salesforce_Account": {
+      "type": "object",
+      "required": [
+        "Name",
+        "OwnerId"
+      ],
+      "properties": {
+        "IsDeleted": {
+          "type": "boolean",
+          "description": "Deleted"
+        },
+        "MasterRecordId": {
+          "type": "string",
+          "description": "Master Record ID"
+        },
+        "Name": {
+          "type": "string",
+          "description": "Account Name"
+        },
+        "Type": {
+          "type": "string",
+          "description": "Account Type"
+        },
+        "ParentId": {
+          "type": "string",
+          "description": "Parent Account ID"
+        },
+        "BillingStreet": {
+          "type": "string",
+          "description": "Billing Street"
+        },
+        "BillingCity": {
+          "type": "string",
+          "description": "Billing City"
+        },
+        "BillingState": {
+          "type": "string",
+          "description": "Billing State/Province"
+        },
+        "BillingPostalCode": {
+          "type": "string",
+          "description": "Billing Zip/Postal Code"
+        },
+        "BillingCountry": {
+          "type": "string",
+          "description": "Billing Country"
+        },
+        "BillingLatitude": {
+          "type": "number",
+          "description": "Billing Latitude"
+        },
+        "BillingLongitude": {
+          "type": "number",
+          "description": "Billing Longitude"
+        },
+        "BillingAddress": {
+          "type": "string",
+          "description": "Billing Address"
+        },
+        "ShippingStreet": {
+          "type": "string",
+          "description": "Shipping Street"
+        },
+        "ShippingCity": {
+          "type": "string",
+          "description": "Shipping City"
+        },
+        "ShippingState": {
+          "type": "string",
+          "description": "Shipping State/Province"
+        },
+        "ShippingPostalCode": {
+          "type": "string",
+          "description": "Shipping Zip/Postal Code"
+        },
+        "ShippingCountry": {
+          "type": "string",
+          "description": "Shipping Country"
+        },
+        "ShippingLatitude": {
+          "type": "number",
+          "description": "Shipping Latitude"
+        },
+        "ShippingLongitude": {
+          "type": "number",
+          "description": "Shipping Longitude"
+        },
+        "ShippingAddress": {
+          "type": "string",
+          "description": "Shipping Address"
+        },
+        "Phone": {
+          "type": "string",
+          "description": "Account Phone"
+        },
+        "Fax": {
+          "type": "string",
+          "description": "Account Fax"
+        },
+        "AccountNumber": {
+          "type": "string",
+          "description": "Account Number"
+        },
+        "Website": {
+          "type": "string",
+          "description": "Website"
+        },
+        "PhotoUrl": {
+          "type": "string",
+          "description": "Photo URL"
+        },
+        "Sic": {
+          "type": "string",
+          "description": "SIC Code"
+        },
+        "Industry": {
+          "type": "string",
+          "description": "Industry"
+        },
+        "AnnualRevenue": {
+          "type": "number",
+          "description": "Annual Revenue"
+        },
+        "NumberOfEmployees": {
+          "type": "number",
+          "description": "Employees"
+        },
+        "Ownership": {
+          "type": "string",
+          "description": "Ownership"
+        },
+        "TickerSymbol": {
+          "type": "string",
+          "description": "Ticker Symbol"
+        },
+        "Description": {
+          "type": "string",
+          "description": "Account Description"
+        },
+        "Rating": {
+          "type": "string",
+          "description": "Account Rating"
+        },
+        "Site": {
+          "type": "string",
+          "description": "Account Site"
+        },
+        "OwnerId": {
+          "type": "string",
+          "description": "Owner ID"
+        },
+        "CreatedDate": {
+          "type": "string",
+          "description": "Created Date"
+        },
+        "CreatedById": {
+          "type": "string",
+          "description": "Created By ID"
+        },
+        "LastModifiedDate": {
+          "type": "string",
+          "description": "Last Modified Date"
+        },
+        "LastModifiedById": {
+          "type": "string",
+          "description": "Last Modified By ID"
+        },
+        "SystemModstamp": {
+          "type": "string",
+          "description": "System Modstamp"
+        },
+        "LastActivityDate": {
+          "type": "string",
+          "description": "Last Activity"
+        },
+        "LastViewedDate": {
+          "type": "string",
+          "description": "Last Viewed Date"
+        },
+        "LastReferencedDate": {
+          "type": "string",
+          "description": "Last Referenced Date"
+        },
+        "Jigsaw": {
+          "type": "string",
+          "description": "Data.com Key"
+        },
+        "JigsawCompanyId": {
+          "type": "string",
+          "description": "Jigsaw Company ID"
+        },
+        "CleanStatus": {
+          "type": "string",
+          "description": "Clean Status"
+        },
+        "AccountSource": {
+          "type": "string",
+          "description": "Account Source"
+        },
+        "DunsNumber": {
+          "type": "string",
+          "description": "D-U-N-S Number"
+        },
+        "Tradestyle": {
+          "type": "string",
+          "description": "Tradestyle"
+        },
+        "NaicsCode": {
+          "type": "string",
+          "description": "NAICS Code"
+        },
+        "NaicsDesc": {
+          "type": "string",
+          "description": "NAICS Description"
+        },
+        "YearStarted": {
+          "type": "string",
+          "description": "Year Started"
+        },
+        "SicDesc": {
+          "type": "string",
+          "description": "SIC Description"
+        },
+        "DandbCompanyId": {
+          "type": "string",
+          "description": "D&B Company ID"
+        },
+        "CustomerPriority__c": {
+          "type": "string",
+          "description": "Customer Priority"
+        },
+        "SLA__c": {
+          "type": "string",
+          "description": "SLA"
+        },
+        "Active__c": {
+          "type": "string",
+          "description": "Active"
+        },
+        "NumberofLocations__c": {
+          "type": "number",
+          "description": "Number of Locations"
+        },
+        "UpsellOpportunity__c": {
+          "type": "string",
+          "description": "Upsell Opportunity"
+        },
+        "SLASerialNumber__c": {
+          "type": "string",
+          "description": "SLA Serial Number"
+        },
+        "SLAExpirationDate__c": {
+          "type": "string",
+          "description": "SLA Expiration Date"
+        }
+      }
+    }
+  },
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ]
+}

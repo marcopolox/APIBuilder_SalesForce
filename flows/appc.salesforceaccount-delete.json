@@ -1,0 +1,80 @@
+{
+  "version": "1",
+  "returns": {
+    "status": "$.status|0"
+  },
+  "start": "model.delete",
+  "nodes": {
+    "model.delete": {
+      "type": "ModelDelete",
+      "config": {
+        "model": "appc.salesforce/Account"
+      },
+      "parameters": [
+        {
+          "name": "id",
+          "value": "$.params.id|0"
+        }
+      ],
+      "response": {
+        "context": {
+          "$|0": "model"
+        },
+        "routes": [
+          {
+            "conditions": [
+              {
+                "key": "$._deleted|0",
+                "eq": true
+              }
+            ],
+            "next": "response.success"
+          },
+          {
+            "next": "response.error.notfound"
+          }
+        ]
+      }
+    },
+    "response.success": {
+      "type": "parametermap",
+      "config": {},
+      "parameters": [
+        {
+          "name": "status",
+          "default": 204
+        }
+      ],
+      "response": {
+        "context": {
+          "$.status|0": "status"
+        },
+        "routes": [
+          {
+            "next": null
+          }
+        ]
+      }
+    },
+    "response.error.notfound": {
+      "type": "parametermap",
+      "config": {},
+      "parameters": [
+        {
+          "name": "status",
+          "default": 404
+        }
+      ],
+      "response": {
+        "context": {
+          "$.status|0": "status"
+        },
+        "routes": [
+          {
+            "next": null
+          }
+        ]
+      }
+    }
+  }
+}

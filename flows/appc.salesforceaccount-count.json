@@ -1,0 +1,85 @@
+{
+  "version": "1",
+  "returns": {
+    "status": "$.status|0",
+    "data": "$.response|0"
+  },
+  "start": "model.count",
+  "nodes": {
+    "model.count": {
+      "type": "ModelCount",
+      "config": {
+        "model": "appc.salesforce/Account"
+      },
+      "parameters": [
+        {
+          "name": "limit",
+          "value": "$.params.limit|0"
+        },
+        {
+          "name": "skip",
+          "value": "$.params.skip|0"
+        },
+        {
+          "name": "where",
+          "value": "$.params.where|0"
+        },
+        {
+          "name": "order",
+          "value": "$.params.order|0"
+        },
+        {
+          "name": "sel",
+          "value": "$.params.sel|0"
+        },
+        {
+          "name": "unsel",
+          "value": "$.params.unsel|0"
+        },
+        {
+          "name": "page",
+          "value": "$.params.page|0"
+        },
+        {
+          "name": "per_page",
+          "value": "$.params.per_page|0"
+        }
+      ],
+      "response": {
+        "context": {
+          "$|0": "count"
+        },
+        "routes": [
+          {
+            "next": "response.success"
+          }
+        ]
+      }
+    },
+    "response.success": {
+      "type": "parametermap",
+      "config": {},
+      "parameters": [
+        {
+          "name": "count",
+          "value": "$.count|0"
+        },
+        {
+          "name": "status",
+          "default": 200
+        }
+      ],
+      "response": {
+        "context": {
+          "$.count|0": "response",
+          "$.status|0": "status"
+        },
+        "routes": [
+          {
+            "next": null
+          }
+        ]
+      }
+    }
+  }
+}
